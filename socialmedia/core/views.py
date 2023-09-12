@@ -12,7 +12,7 @@ from rest_framework.response import Response
 from .serializers import *
 # Create your views here.
 
-class ToDoView(viewsets.ModelViewSet):
+class ProfileView(viewsets.ModelViewSet):
     serializer_class = ProfileSerializer
     queryset = Profile.objects.all()
         

@@ -1,7 +1,7 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
-
+import ProfileComponent from './ProfileComponent';
 
 const Header = () => {
     return (
@@ -9,7 +9,9 @@ const Header = () => {
             <div id="logo" className="items-start">
                 <a href="home.html">
                     <b>
-                        <h1 className="uppercase">Social Book</h1>
+                        <h1 className="uppercase">Yoga
+                        <ProfileComponent/>
+                         </h1>
                     </b>
                 </a>
             </div>
