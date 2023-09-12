@@ -6,7 +6,16 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from itertools import chain
 import random
+from rest_framework import viewsets
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from .serializers import *
 # Create your views here.
+
+class ToDoView(viewsets.ModelViewSet):
+    serializer_class = ProfileSerializer
+    queryset = Profile.objects.all()
+        
 
 @login_required(login_url='signin')
 def index(request):
