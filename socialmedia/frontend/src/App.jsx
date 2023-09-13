@@ -4,6 +4,7 @@ import axios from 'axios';
 import Header from "./components/Header"
 import SignUpForm from './components/SingUpForm'
 import SignInForm from './components/SignIn';
+import Home from './components/Home'
 
 axios.defaults.xsrfCookieName = 'csrftoken';
 axios.defaults.xsrfHeaderName = 'X-CSRFToken';
@@ -18,9 +19,12 @@ function App() {
 
   return (
     <>
-      <SignInForm></SignInForm>
+    <div className='bg-gradient-to-t from-[#EDF5E0] to-[#053B63] md:bg-im'>
+    <Home></Home>
+      {/* <SignInForm></SignInForm> */}
       {/* <SignUpForm></SignUpForm> */}
-      <Header/>
+      {/* <Header/> */}
+      </div>
     </>
   )
 }

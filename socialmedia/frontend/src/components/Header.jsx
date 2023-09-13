@@ -10,7 +10,7 @@ const Header = () => {
                 <a href="home.html">
                     <b>
                         <h1 className="uppercase">Yoga
-                        <ProfileComponent/>
+                        {/* <ProfileComponent/> */}
                          </h1>
                     </b>
                 </a>

@@ -11,20 +11,20 @@ function SignInForm() {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
+    // const handleSubmit = async (e) => {
+    //     e.preventDefault();
 
-        try {
-            const response = await axios.post('/api/signin', formData); // Adjust the API endpoint as needed
-            console.log('Sign-in successful:', response.data);
+    //     try {
+    //         const response = await axios.post('/api/signin', formData); // Adjust the API endpoint as needed
+    //         console.log('Sign-in successful:', response.data);
 
-            // You can handle success here, such as redirecting the user
-        } catch (error) {
-            console.error('Sign-in error:', error);
+    //         // You can handle success here, such as redirecting the user
+    //     } catch (error) {
+    //         console.error('Sign-in error:', error);
 
-            // Handle the error, e.g., displaying an error message to the user
-        }
-    };
+    //         // Handle the error, e.g., displaying an error message to the user
+    //     }
+    // };
 
     return (
         <div>

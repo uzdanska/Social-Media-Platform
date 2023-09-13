@@ -10,6 +10,7 @@ from rest_framework import viewsets
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from .serializers import *
+from django.http import JsonResponse
 # Create your views here.
 
 class ProfileView(viewsets.ModelViewSet):
@@ -234,7 +235,12 @@ def signup(request):
     else:
         return render(request, 'signup.html')
     
+from django.views.decorators.csrf import csrf_protect
+from django.template import RequestContext
+
+@csrf_protect
 def signin(request):
+    csrfContext = RequestContext(request)
 
     if request.method == "POST":
         username = request.POST['username']
@@ -256,3 +262,11 @@ def signin(request):
 def logout(request):
     auth.logout(request)
     return redirect('signin')
+
+# def home(request):
+#     image_url = '/static/assets/images/logo.png'  # Ścieżka do twojego zdjęcia
+#     return render(request, 'my_app/home.html', {'image_url': image_url})
+
+# def get_image_url(request):
+#     image_url = '/static/assets/images/logo.png'  # Ścieżka do twojego zdjęcia
+#     return JsonResponse({"image_url": image_url})

@@ -17,7 +17,7 @@ const SignUpForm = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('/signup/', formData);
+            const response = await axios.post('/api/signup/', formData);
             console.log(response.data.message); // Registration successful
             // Redirect the user to the settings page or perform other actions.
         } catch (error) {
