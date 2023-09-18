@@ -27,9 +27,13 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+CORS_ALLOW_ALL_ORIGINS = [
+    'http://localhost:3000', 
+    'http://127.0.0.1:3000'
+]
+CORS_ALLOW_CREDENTIALS = True
 
 # Application definition
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -51,6 +55,10 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'corsheaders.middleware.CorsMiddleware',
+]
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.User',
 ]
 
 ROOT_URLCONF = 'socialmedia.urls'

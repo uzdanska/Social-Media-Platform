@@ -14,6 +14,3 @@ class UserRegisterSerializer(serializers.ModelSerializer):
     class Meta:
         model = UserModel
         fields = "__all__"
-
-    def create(self, clean_data):
-        user_obj = UserModel.objects

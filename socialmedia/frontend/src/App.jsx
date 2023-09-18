@@ -1,10 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import axios from 'axios';
-import Header from "./components/Header"
-import SignUpForm from './components/SingUpForm'
-import SignInForm from './components/SignIn';
-import Home from './components/Home'
+import Home from './components/Home';
 
 axios.defaults.xsrfCookieName = 'csrftoken';
 axios.defaults.xsrfHeaderName = 'X-CSRFToken';
@@ -19,7 +16,7 @@ function App() {
 
   return (
     <>
-    <div className='bg-gradient-to-t from-[#EDF5E0] to-[#053B63] md:bg-im'>
+    <div className="bg-[url('static/assets/images/background_image.png')] bg-cover bg-center w-screen h-screen">
     <Home></Home>
       {/* <SignInForm></SignInForm> */}
       {/* <SignUpForm></SignUpForm> */}

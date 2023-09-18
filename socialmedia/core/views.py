@@ -251,9 +251,9 @@ def signin(request):
         if user is not None:
             auth.login(request, user)
             return redirect('/')
-        else:
-            messages.info(request, 'Credentials Invalid')
-            return redirect('signin')
+        # else:
+        #     messages.info(request, 'Credentials Invalid')
+        #     return redirect('signin')
         
     else:
         return render(request, 'signin.html')
@@ -262,11 +262,3 @@ def signin(request):
 def logout(request):
     auth.logout(request)
     return redirect('signin')
-
-# def home(request):
-#     image_url = '/static/assets/images/logo.png'  # Ścieżka do twojego zdjęcia
-#     return render(request, 'my_app/home.html', {'image_url': image_url})
-
-# def get_image_url(request):
-#     image_url = '/static/assets/images/logo.png'  # Ścieżka do twojego zdjęcia
-#     return JsonResponse({"image_url": image_url})
